@@ -21,16 +21,22 @@
       "role": "Developer"
     }
   ],
+  "repositories": [
+    {
+      "type": "vcs",
+      "url": "https://github.com/EsupPortail/phpCAS"
+    }
+  ],
   "require": {
     "php": ">=7.2.0",
     "illuminate/support": "^6.0|^7.0|^8.0|^9.0|^10.0|^11.0|^12.0",
-    "apereo/phpcas": "^1.6",
+    "apereo/phpcas": "dev-master",
     "monolog/monolog": "^2.0|^3.0"
   },
   "require-dev": {
     "phpunit/phpunit": "^8.0|^9.0|^10.0 | ^11.0",
     "pestphp/pest": "^3.0",
-    "orchestra/testbench": "^6.25"
+    "orchestra/testbench": "^9.0"
   },
   "autoload": {
     "psr-4": {
@@ -46,6 +52,7 @@
     }
   },
   "minimum-stability": "stable",
+  "prefer-stable": true,
   "extra": {
     "laravel": {
       "providers": [
@@ -54,6 +61,11 @@
       "aliases": {
         "Cas": "Subfission\\Cas\\Facades\\Cas"
       }
+    }
+  },
+  "config": {
+    "allow-plugins": {
+      "pestphp/pest-plugin": true
     }
   }
 }
